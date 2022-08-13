@@ -1,33 +1,43 @@
-body {
+* {
+  box-sizing: border-box;
+}
+body, html {
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
   font-family: "Montserrat", sans-serif;
   color: white;
   background-image: url("/background.gif");
   background-size: cover;
   background-position: center;
+  overflow: hidden;
+}
+#root {
+  width: 100%;
+  height: 100%;
 }
 .content {
   &_wrapper {
+    width: 100%;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100vw;
-    height: 100vh;
     flex-direction: column;
     background: rgba(0, 0, 0, 0.65);
   }
   &_title {
-    font-size: xxx-large;
+    font-size: 58px;
     font-weight: 700;
   }
   &_subtitle {
-    font-size: x-large;
+    font-size: 26px;
     font-weight: 300;
   }
   &_links {
     position: fixed;
-    left: 5px;
+    // left: 5px;
     bottom: 5px;
     display: flex;
     flex-direction: row;
@@ -47,16 +57,16 @@ a:any-link {
   color: white;
 }
 
-@media screen and (max-width: 350px){
+@media screen and (max-width: 300px){
   .content {
     &_title {
-      font-size: xx-large;
+      font-size: 48px;
     }
     &_subtitle {
-      font-size: large;
+      font-size: 24px;
     }
     &_links_item {
-      font-size: 24px;
+      font-size: 22px;
     }
   }
 }
